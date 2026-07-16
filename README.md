@@ -30,7 +30,7 @@ The target address is represented as `<MACHINE_IP>` because TryHackMe assigns a 
 - [Command execution and the first ingredient](#command-execution-and-the-first-ingredient)
 - [Locating the second ingredient](#locating-the-second-ingredient)
 - [Privilege context and the final ingredient](#privilege-context-and-the-final-ingredient)
-- [Answer summary](#answer-summary)
+
 
 ## Reconnaissance
 
