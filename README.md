@@ -191,7 +191,7 @@ sudo less /root/3rd.txt
 
 ## Lessons learned
 
-This room demonstrated how several small weaknesses can be chained together. Information disclosure provided valid credentials, the authenticated command portal enabled filesystem enumeration, and excessive sudo privileges allowed access to files owned by the root user.
+This room demonstrated how several small weaknesses can be chained together. Information disclosure exposed valid credentials, the authenticated command portal enabled filesystem enumeration, and sudo-enabled privileged access allowed the web-service account to read root-owned files.
 
 ---
 
