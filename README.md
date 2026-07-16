@@ -187,7 +187,7 @@ sudo less /root/3rd.txt
 - Do not pass user-controlled input directly to operating-system commands.
 - Replace shell execution with narrowly scoped server-side functions.
 - Run the web service with the minimum required privileges.
-- Remove unnecessary passwordless sudo permissions from `www-data`.
+- Review and remove unnecessary sudo permissions granted to `www-data`.
 
 ## Lessons learned
 
