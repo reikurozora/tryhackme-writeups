@@ -173,11 +173,6 @@ sudo less /root/3rd.txt
 
 The three room questions were answered in the same order in which the ingredients were discovered.
 
-| Question | Evidence location | Answer |
-| --- | --- | --- |
-| First | `Sup3rS3cretPickl3Ingred.txt` in the web directory | `[REDACTED]` |
-| Second | `/home/rick/second ingredients` | `[REDACTED]` |
-| Final | `/root/3rd.txt` | `[REDACTED]` |
 
 ---
 
