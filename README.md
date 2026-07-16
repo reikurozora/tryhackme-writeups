@@ -195,4 +195,3 @@ This room demonstrated how several small weaknesses can be chained together. Inf
 
 ---
 
-This writeup documents activity performed only inside the authorized TryHackMe lab environment.
