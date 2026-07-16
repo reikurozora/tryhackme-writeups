@@ -169,9 +169,6 @@ sudo less /root/3rd.txt
 
 **Final ingredient:** `[REDACTED]`
 
-## Answer summary
-
-The three room questions were answered in the same order in which the ingredients were discovered.
 
 
 ---
