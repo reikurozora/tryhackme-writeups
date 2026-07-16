@@ -30,7 +30,10 @@ The target address is represented as `<MACHINE_IP>` because TryHackMe assigns a 
 - [Command execution and the first ingredient](#command-execution-and-the-first-ingredient)
 - [Locating the second ingredient](#locating-the-second-ingredient)
 - [Privilege context and the final ingredient](#privilege-context-and-the-final-ingredient)
-
+- [Answer summary](#answer-summary)
+- [Security findings](#security-findings)
+- [Remediation](#remediation)
+- [Lessons learned](#lessons-learned)
 
 ## Reconnaissance
 
@@ -151,7 +154,7 @@ whoami
 
 The output was `www-data`, confirming that commands were running as the restricted web-service account.
 
-To determine whether the web-service account could execute commands with elevated privileges, I tested access to the root user's home directory using `sudo ls /root`. The command executed successfully without requesting a password, confirming that the account had excessive sudo privileges.
+To determine whether the web-service account could execute commands with elevated privileges, I tested access to the root user's home directory using `sudo ls /root`. The command executed successfully without requesting a password, demonstrating that the web-service account could use `sudo` to access privileged resources. Because a complete `sudo -l` output was not captured, the exact scope of the account's sudo permissions was not verified.
 
 ```bash
 sudo ls /root
@@ -169,7 +172,38 @@ sudo less /root/3rd.txt
 
 **Final ingredient:** `[REDACTED]`
 
+## Answer summary
 
+The three room questions were answered in the same order in which the ingredients were discovered.
+
+> The final answers are intentionally redacted in this public version.
+
+| Question | Evidence location | Public answer |
+| --- | --- | --- |
+| First | `Sup3rS3cretPickl3Ingred.txt` in the web directory | `[REDACTED]` |
+| Second | `/home/rick/second ingredients` | `[REDACTED]` |
+| Final | `/root/3rd.txt` | `[REDACTED]` |
+
+## Security findings
+
+- Username disclosure through an HTML comment
+- Sensitive information exposed through `robots.txt`
+- Authenticated operating-system command execution
+- Excessive sudo privileges assigned to the web-service account
+- Insufficient separation between the web application and privileged system resources
+
+## Remediation
+
+- Remove sensitive information from HTML comments.
+- Never store credentials or secrets in `robots.txt`.
+- Do not pass user-controlled input directly to operating-system commands.
+- Replace shell execution with narrowly scoped server-side functions.
+- Run the web service with the minimum required privileges.
+- Remove unnecessary passwordless sudo permissions from `www-data`.
+
+## Lessons learned
+
+This room demonstrated how several small weaknesses can be chained together. Information disclosure provided valid credentials, the authenticated command portal enabled filesystem enumeration, and excessive sudo privileges allowed access to files owned by the root user.
 
 ---
 
