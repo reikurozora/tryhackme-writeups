@@ -172,17 +172,6 @@ sudo less /root/3rd.txt
 
 **Final ingredient:** `[REDACTED]`
 
-## Answer summary
-
-The three room questions were answered in the same order in which the ingredients were discovered.
-
-> The final answers are intentionally redacted in this public version.
-
-| Question | Evidence location | Public answer |
-| --- | --- | --- |
-| First | `Sup3rS3cretPickl3Ingred.txt` in the web directory | `[REDACTED]` |
-| Second | `/home/rick/second ingredients` | `[REDACTED]` |
-| Final | `/root/3rd.txt` | `[REDACTED]` |
 
 ## Security findings
 
