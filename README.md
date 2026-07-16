@@ -39,7 +39,7 @@ The target address is represented as `<MACHINE_IP>` because TryHackMe assigns a 
 I began with a basic Nmap scan to identify reachable TCP services on the target.
 
 ```bash
-nmap -sC -sV <MACHINE_IP>
+nmap <MACHINE_IP>
 ```
 
 The scan identified two open ports:
